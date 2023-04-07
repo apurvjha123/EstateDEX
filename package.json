@@ -1,0 +1,13 @@
+{
+  "name": "estatedex",
+  "version": "1.0.0",
+  "description": "Secure your land transection",
+  "main": "index.js",
+  "repository": "https://github.com/apurvjha123/EstateDEX",
+  "author": "Apurv Jha",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "hardhat": "^2.13.0"
+  }
+}
