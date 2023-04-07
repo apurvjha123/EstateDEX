@@ -39,4 +39,40 @@ contract estateRegistration {
         return totalestates;
     }
     
+    function approveestate(uint256 id) public onlyGovernment {
+        require(id <= totalestates && estates[id].isRegistered == true, "Invalid estate ID");
+        estates[id].isApproved = true;
+    }
+    
+    function getestateById(uint256 id) public view returns (address _owner, string memory _location, uint256 _area, uint256 _value, bool isApproved,address _buyer,address[] memory _previousOwners) {
+        require(id <= totalestates && estates[id].isRegistered == true, "Invalid estate ID");
+        return (estates[id].owner, estates[id].location, estates[id].area, estates[id].value, estates[id].isApproved,estates[id].buyer,estates[id].previousOwners);
+    }
+    function transferestateOwnership(uint256 id) public {
+        require(id <= totalestates && estates[id].isRegistered == true && estates[id].isApproved == true, "Invalid estate ID or estate is not approved");
+        require(msg.sender == estates[id].owner, "Only the owner can transfer ownership");
+        estates[id].previousOwners.push(estates[id].owner);
+        estates[id].owner = estates[id].buyer;
+        estates[id].buyer = address(0);
+    }
+
+    function depositFunds(uint256 id) public payable{
+        require(msg.sender != escrowAgent,"Agent can't deposite");
+        estates[id].isDeposited = true;
+        estates[id].buyer = msg.sender;
+        deposits[msg.sender]+= msg.value;
+    }
+    function depositer(address id) public view returns(uint256){
+        return deposits[id];
+    }
+    function withdrawfund(uint256 id) internal{
+        require(estates[id].owner != msg.sender,"owner can't withdraw");
+        address payable seller = payable(estates[id].previousOwners[estates[id].previousOwners.length-1]);
+        seller.transfer(deposits[estates[id].owner]);
+        deposits[estates[id].owner]=0;
+    }
+
+    function check(uint id) public view returns(uint){
+        return deposits[estates[id].previousOwners[estates[id].previousOwners.length-1]];
+    }
 }
