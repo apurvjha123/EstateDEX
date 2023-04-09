@@ -1,0 +1,259 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-image: linear-gradient(to right, rgba(200, 8,207, 0.75), rgba(28, 70, 184, 0.8));
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    
+  }
+  nav {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 5%;
+  }
+  nav .logo{
+    font-size: 30px;
+    font-weight: 700;
+    
+  }
+  nav ul{
+    display: flex;
+    list-style: none;
+  }
+  nav ul li{
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  nav .navLinks button{
+    padding: 2px 20px;
+    border-radius: 10px;
+    color: blue;
+    font-size: 16px;
+    border-style: none;
+    font-weight: 700;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  nav ul li:hover{
+    background-color: rgb(44, 1, 197);
+  }
+  nav .menubtn{
+    font-size: 30px;
+    font-weight: bolder;
+    cursor: pointer;
+    display: none;
+  }
+
+  
+.box{
+  text-align: center;
+  padding-left: 700px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-stretch: expanded;
+  
+  
+}
+  /* responsive navbar css */
+  @media screen and (max-width: 600px) {
+    nav .menubtn{
+      display: flex;
+    }
+    nav .navLinks{
+      display: none;
+    }
+    .sideNav {
+      display: block !important;
+    }
+  }
+   
+  .sideNav{
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0%;
+    background-color: rgb(44, 1, 197);
+    overflow-x: hidden;
+    transition: 0.3s ease-in;
+    padding-top: 60px;
+    display: none;
+    
+  }
+   
+  .sideNav a{
+    padding: 8px 8px 8px 40px;
+    display: block;
+    font-size: 25px;
+    font-weight: 500;
+    color: #d1d1d1;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+  .sideNav a button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: blue;
+    font-size: 16px;
+    border-style: none;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .sideNav a:hover{
+    color: white;
+  }
+  .sideNav .closeBtn{
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 20px;
+    margin-left: 50px;
+  }
+  .sideNav .button{
+    color: black;
+    cursor: pointer;
+  }
+
+  
+   
+  .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2% 5%;
+    flex-direction: row;
+    
+  }
+  .row .column1 {
+    padding-right: 50px;
+    padding-top: 0%;
+  }
+  .column1 h1 {
+    padding-top: -40px;
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-top: 150px;
+    margin-left: 50px;
+    
+  }
+  .column1 p {
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    
+  }
+  .column1 button {
+    width: 150px;
+    padding: 12px 20px;
+    border-radius: 20px;
+    border-style: none;
+    color: blue;
+    font-size: 17px;
+    font-weight: 600;
+    
+  }
+  .container{
+    /* margin-top: 100px; */
+    /* padding-top: 50px; */
+    margin-top: 150px;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 400px;
+    display: flex;
+   justify-content: end;
+   display: -webkit-box;
+   margin-left: auto;
+
+  }
+  /* Header content responsive */
+  @media screen and (max-width: 980px) {
+    .column2 img {
+      width: 350px;
+    }
+    .column1 h1 {
+      font-size: 40px;
+      margin-top: 100px;
+    }
+    .column1 p{
+      font-size: 17px;
+    }
+    .row {
+      margin-top: 80px;
+    }
+  }
+   
+  @media screen and (max-width: 600px) {
+   
+    .column1 h1 {
+      font-size: 35px;
+    }
+    .row {
+      flex-direction: column;
+   
+    }
+    .row .column1 {
+      padding: 30px;
+    }
+  }
+  .margin-right{
+    margin-right: 50px;
+  }
+  .b{
+    margin-top: 5px;
+    font-style: bold;
+    font-size: 20px;
+    color: black;
+  }
+  .title{
+    
+    margin-top: 5px;
+    font-style: bold;
+    font-size: 20px;
+    color: black;
+  }
+  .location{
+    margin-top: 5px;
+    font-style: bold;
+    font-size: 20px;
+    color: black;
+  }
+  .create{
+    
+    margin-top: 5px;
+    font-style: bold;
+    font-size: 20px;
+    color: black;
+    border: 1px;
+  }
+  .form-control{
+    margin-left: 50px;
+  }
+  .id{
+    margin-top: 5px;
+    font-style: bold;
+    font-size: 20px;
+    color: black;
+  }
+  .amount{
+    margin-top: 5px;
+    font-style: bold;
+    font-size: 20px;
+    color: black;
+  }
+  .box{
+    margin: 3px;
+  }
+

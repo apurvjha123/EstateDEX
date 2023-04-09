@@ -42,10 +42,10 @@ const Isforsale = () => {
     <form onSubmit={handleSubmit}>
       <div >
         <div>
-          <label  htmlFor="Name">
+          <label  htmlFor="Name" className='id'>
             id
             <label>
-              <input
+              <input className='form-control'
                 type="text"
                 placeholder="id" name="id" value={Input.name} onChange={handleChange}
                 
@@ -54,10 +54,10 @@ const Isforsale = () => {
           </label>
         </div>
         <div >
-          <label  htmlFor="amount">
+          <label  htmlFor="amount" className='amount'>
             amount
             <label>
-              <input
+              <input className='form-control'
                 
                 name="amount" value={Input.name} onChange={handleChange}
                 
@@ -66,8 +66,8 @@ const Isforsale = () => {
           </label>
         </div>
         <div >
-          <button >
-            Create Account
+          <button className='create' >
+           Mark for sale
           </button>
         </div>
       </div>

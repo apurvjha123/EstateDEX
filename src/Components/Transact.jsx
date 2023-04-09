@@ -35,7 +35,7 @@ const Transact = () => {
     <form onSubmit={handleSubmit}>
       <div >
         <div>
-          <label  htmlFor="Name">
+          <label  htmlFor="Name" className='amount'>
             Id
             <label>
               <input
@@ -48,7 +48,7 @@ const Transact = () => {
         </div>
         <div >
           <button >
-            Create Account
+            Transact
           </button>
         </div>
       </div>

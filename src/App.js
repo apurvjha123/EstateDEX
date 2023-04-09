@@ -6,12 +6,14 @@ import Temp from "./Components/Temp";
 import Isforsale from "./Components/Isforsale";
 import DepositeFunds from "./Components/DepositeFunds";
 import Transact from "./Components/Transact";
+import Homes from "./Components/Homes";
 
 export default function Home() {
   return (
     <BrowserRouter>
-    <Navbar/>
+    {/* <Navbar/> */}
       <Routes>
+      <Route exact path="/" element={<Homes/>}/>
           <Route exact path="/form" element={<Form/>}/>
           <Route exact path="/properties" element={<Properties/>}/>
           <Route exact path="/temp" element={<Temp/>}/>

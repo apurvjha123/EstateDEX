@@ -36,16 +36,16 @@ const Form = () => {
   return (
     <>
   
-      <div className="">
+      <div className="form-text text-muted">
   <div >
     <h3 >Welcome</h3>
     <form onSubmit={handleSubmit}>
       <div >
         <div>
-          <label  htmlFor="Name">
-            title
+          <label  htmlFor="Name" className='title'>
+            Title
             <label>
-              <input
+              <input className="form-control"
                 type="text"
                 placeholder="title" name="title" value={Input.name} onChange={handleChange}
                 
@@ -54,10 +54,10 @@ const Form = () => {
           </label>
         </div>
         <div >
-          <label  htmlFor="location">
-            location
+          <label  htmlFor="location" className='location'>
+            Location
             <label>
-              <input
+              <input className="form-control"
                 
                 name="location" value={Input.name} onChange={handleChange}
                 
@@ -66,10 +66,10 @@ const Form = () => {
           </label>
         </div>
         <div >
-          <label>
-            area
+          <label className='b'>
+            Area
             <label>
-              <input
+              <input className="form-control"
                  name="area" value={Input.name} onChange={handleChange} autoComplete='on'
                 
               />
@@ -77,7 +77,7 @@ const Form = () => {
           </label>
         </div>
         <div >
-          <button >
+          <button className="create">
             Create Account
           </button>
         </div>

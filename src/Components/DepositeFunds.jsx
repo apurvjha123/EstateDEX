@@ -36,7 +36,7 @@ const DepositeFunds = () => {
     <form onSubmit={handleSubmit}>
       <div >
         <div>
-          <label  htmlFor="Name">
+          <label  htmlFor="Name" className='amount'>
             Id
             <label>
               <input
@@ -48,8 +48,8 @@ const DepositeFunds = () => {
           </label>
         </div>
         <div >
-          <button >
-            Create Account
+          <button className='create'>
+            Deposit
           </button>
         </div>
       </div>
