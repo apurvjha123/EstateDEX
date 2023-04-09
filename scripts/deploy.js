@@ -15,7 +15,7 @@ async function main() {
   if (network.config.chainId === 11155111 && process.env.sepolia_url) {
     console.log("Waiting for block confirmations...");
     await estates.deployTransaction.wait(2);
-    // await verify(estates.address, []);
+    // await verify(estates.address, [])
   }
 
   const government = await estates.government();
